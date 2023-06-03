@@ -8,7 +8,7 @@ import { createCollege, getAllRelated } from '../controller/college.js'
 
 const router = express.Router()
 
-router.route('/all').get(getAllRelated)
+router.route('/all').post(getAllRelated)
 router.route('/new').post(createCollege)
 
 
