@@ -2,7 +2,7 @@ import express from 'express'
 import { config } from 'dotenv'
 import { errorMiddleware } from './server/middleWares/error.js'
 import cookieParser from 'cookie-parser'
-
+import cors from 'cors'
 
 import college from './server/routes/college.js'
 import User from './server/models/user.js'
@@ -16,6 +16,7 @@ const app = express()
 app.use(express.json())
 
 app.use(cookieParser())
+app.use(cors())
 
 // importing Router here
 app.get("/", (req, res, next) => {

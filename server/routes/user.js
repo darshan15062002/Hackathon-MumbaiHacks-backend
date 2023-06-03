@@ -11,11 +11,11 @@ router.get("/me", isAuthenticated, getMyProfile)
 router.post("/logout", isAuthenticated, logOut)
 
 // update route
-router.put("/updateprofile", isAuthenticated, updateProfile)
-router.put("/changepassword", isAuthenticated, changePassword)
-router.put("/updatepic", isAuthenticated, singleUpload, updatePic)
+// router.put("/updateprofile", isAuthenticated, updateProfile)
+// router.put("/changepassword", isAuthenticated, changePassword)
+// router.put("/updatepic", isAuthenticated, singleUpload, updatePic)
 
 // forget password
-router.route("/forgetpassword").post(forgetPassword).put(resetPassword)
+// router.route("/forgetpassword").post(forgetPassword).put(resetPassword)
 
 export default router
