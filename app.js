@@ -3,8 +3,9 @@ import { config } from 'dotenv'
 import { errorMiddleware } from './server/middleWares/error.js'
 import cookieParser from 'cookie-parser'
 
-// import user from './server/routes/user.js'
+
 import college from './server/routes/college.js'
+import User from './server/models/user.js'
 
 config({
     path: "./server/data/config.env"
@@ -20,7 +21,7 @@ app.use(cookieParser())
 app.get("/", (req, res, next) => {
     res.send("working")
 })
-// app.use("/api/v1/user", user)
+app.use("/api/v1/user", User)
 app.use("/api/v1/college", college)
 
 
