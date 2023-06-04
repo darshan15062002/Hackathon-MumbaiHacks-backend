@@ -1,12 +1,12 @@
 import express from 'express'
 import { changePassword, forgetPassword, getMyProfile, logOut, login, register, resetPassword, updatePic, updateProfile } from '../controller/user.js'
 import { isAuthenticated } from '../middleWares/auth.js'
-import { singleUpload } from '../middleWares/multer.js'
+// import { singleUpload } from '../middleWares/multer.js'
 
 const router = express.Router()
 
 router.post("/login", login)
-router.post("/new", singleUpload, register)
+router.post("/new", register)
 router.get("/me", isAuthenticated, getMyProfile)
 router.post("/logout", isAuthenticated, logOut)
 

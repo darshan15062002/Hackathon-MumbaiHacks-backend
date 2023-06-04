@@ -20,33 +20,7 @@ const schema = new mongoose.Schema({
         minLength: [6, "password must be 6 character long"],
         select: false
     },
-    address: {
-        type: String,
-        require: true,
-    },
-    city: {
-        type: String,
-        require: true,
-    },
-    country: {
-        type: String,
-        require: true,
-    },
-    pinCode: {
-        type: Number,
-        require: true,
 
-    },
-    role: {
-        type: String,
-        enum: ["admin", "user"],
-        default: "user"
-
-    },
-    avatar: {
-        public_id: String,
-        url: String
-    },
     otp: Number,
     otp_expire: Date,
 
